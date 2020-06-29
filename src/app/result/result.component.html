@@ -1,0 +1,34 @@
+<div *ngIf="!sharedService.quizToResult">
+    <h2>Score can not be calculated.
+        <br>
+    <b>Please take the Test first...</b></h2>
+        <br>        
+</div>
+<div *ngIf="sharedService.quizToResult">
+    <h3><b>Result</b></h3>&nbsp;
+    <button *ngIf="!showResult" (click)="viewResult()">View Result</button>
+    <br>
+    <div *ngIf="showResult">
+        <div
+        style="border-color: rgb(253, 215, 236);border-style: double; background-color: rgb(215, 215, 248);">
+            <br>
+            <li>Total Questions    : <b>{{markingService.total}}</b></li>
+            <li>Corrrect Answers   : <b style="color: green;">{{markingService.correct}}</b></li>
+            <li>InCorrect Answers  : <b style="color: red;">{{markingService.incorrect}}</b></li>
+            <li>Skipped Questions  : <b style="color: rgb(96, 41, 224);">{{markingService.skipped}}</b></li>
+            <br>
+        </div>
+        <br>
+        <div
+        style="background-color: rgb(31, 17, 109); color: rgb(253, 246, 246);">
+            <br>
+            <h3>&nbsp;Your Score :
+            <b style="color: rgb(253, 182, 182); font-size: xx-large;">{{markingService.score}}</b>
+            (out of <b style="color: rgb(202, 255, 202); font-size: larger;">{{markingService.maximumMark}}</b>)</h3>
+        <br>
+        </div>
+    </div>
+</div>
+<hr>
+<button *ngIf="showResult" (click)="toReview()">Review</button>&nbsp;
+<button (click)="home()">Home</button>

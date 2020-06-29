@@ -1,0 +1,18 @@
+<div style="border-color: rgb(253, 215, 236);border-style: double;
+    background-color: rgb(215, 215, 248);">
+    <p>Marking Scheme:&nbsp;    
+    <b>Correct: </b><b style="color: rgb(9, 41, 9);">+{{contentService.positiveMark}}</b> marks&nbsp;|&nbsp;
+    <b>Incorrect: </b><b style="color: rgb(233, 59, 29);">{{contentService.negativeMark}}</b> marks&nbsp;|&nbsp;
+    <b>Skipped: </b><b style="color: rgb(47, 84, 247);">0</b> marks&nbsp;|&nbsp;
+    <b>Max. Marks: </b><b style="color: rgb(32, 41, 80);">
+        {{contentService.positiveMark*contentService.content.quiz.length}}</b> marks
+</p>
+</div>
+<hr>
+<div style="background-color: rgb(8, 8, 58); color: rgb(248, 241, 241);">
+    <app-questions></app-questions>
+</div>
+<button (click)="previous()" [disabled]="isLeast">&lt;&lt; Previous</button>
+<button (click)="next()" [disabled]="isMost">Next &gt;&gt;</button>&nbsp;
+<button (click)="clear()">Clear</button>&nbsp;
+<button (click)="submit()">Submit</button>

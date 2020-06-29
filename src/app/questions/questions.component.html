@@ -1,0 +1,53 @@
+<p>{{sharedService.flag+1}}.)
+{{contentService.content.quiz[sharedService.flag].Question}}</p>
+<!-- <p>
+    <li>{{contentService.content.quiz[sharedService.flag].Options[0].Option}}</li>
+    <li>{{contentService.content.quiz[sharedService.flag].Options[1].Option}}</li>
+    <li>{{contentService.content.quiz[sharedService.flag].Options[2].Option}}</li>
+    <li>{{contentService.content.quiz[sharedService.flag].Options[3].Option}}</li>
+</p> -->
+<div>
+    <input type="radio" 
+    [name]="contentService.content.quiz[sharedService.flag].Id" 
+    [id]="contentService.content.quiz[sharedService.flag].Options[0].Id"
+    [(ngModel)]="sharedService.userResponse[sharedService.flag]" 
+    [value]="contentService.content.quiz[sharedService.flag].Options[0].Id">
+    <label [for]="contentService.content.quiz[sharedService.flag].Options[0].Id">
+        {{contentService.content.quiz[sharedService.flag].Options[0].Option}}
+    </label>
+</div>
+<div>
+    <input type="radio" 
+    [name]="contentService.content.quiz[sharedService.flag].Id" 
+    [id]="contentService.content.quiz[sharedService.flag].Options[1].Id" 
+    [(ngModel)]="sharedService.userResponse[sharedService.flag]"
+    [value]="contentService.content.quiz[sharedService.flag].Options[1].Id">
+    <label [for]="contentService.content.quiz[sharedService.flag].Options[1].Id">
+        {{contentService.content.quiz[sharedService.flag].Options[1].Option}}
+    </label>
+</div>
+<div>
+    <input type="radio" 
+    [name]="contentService.content.quiz[sharedService.flag].Id" 
+    [id]="contentService.content.quiz[sharedService.flag].Options[2].Id" 
+    [(ngModel)]="sharedService.userResponse[sharedService.flag]"
+    [value]="contentService.content.quiz[sharedService.flag].Options[2].Id">
+    <label [for]="contentService.content.quiz[sharedService.flag].Options[2].Id">
+        {{contentService.content.quiz[sharedService.flag].Options[2].Option}}
+    </label>
+</div>
+<div>
+    <input type="radio" 
+    [name]="contentService.content.quiz[sharedService.flag].Id" 
+    [id]="contentService.content.quiz[sharedService.flag].Options[3].Id" 
+    [(ngModel)]="sharedService.userResponse[sharedService.flag]"
+    [value]="contentService.content.quiz[sharedService.flag].Options[3].Id">
+    <label [for]="contentService.content.quiz[sharedService.flag].Options[3].Id">
+        {{contentService.content.quiz[sharedService.flag].Options[3].Option}}
+    </label>
+</div>
+<hr>
+<!-- <div>
+    <h1>sharedService.userResponse[{{sharedService.flag}}]:{{sharedService.userResponse[sharedService.flag]}}</h1>
+    {{contentService.content.quiz.length}}
+</div> -->

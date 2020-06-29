@@ -1,0 +1,20 @@
+<h1 style="background-color: rgb(63, 63, 167); color: rgb(253, 247, 247);">
+  <b>Quizzy!!</b>
+</h1>
+
+<button *ngIf="sharedService.isStartPage" (click)="toQuiz()"><b>Start Test</b></button>
+&nbsp;
+<div class="dropdown">
+  <button class="dropbtn"><b>Info</b></button>
+  <div class="dropdown-content">
+    <p><b>Quizzy!!</b> is a simple online Test Application using Angular created by <b>Animesh Sinha</b></p>
+  </div>
+</div>
+<!-- <div class="dropdown">
+  <span><b>Info</b></span>
+  <div class="dropdown-content">
+  <p>This is a simple online Test Application using Angular by <b>Animesh Sinha</b></p>
+  </div>
+</div> -->
+<hr>
+<router-outlet></router-outlet>

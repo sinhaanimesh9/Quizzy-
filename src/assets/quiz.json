@@ -1,0 +1,124 @@
+{
+    "PositiveMark" : 3,
+    "NegativeMark" : -1,
+    "quiz":
+    [
+      {
+        "Id" : 1,
+        "Question":"Four Indian cosmonauts selected for Gaganyaan training have resumed their training in which country ?",
+        "Options":[
+          {
+            "Id":1,
+            "Option":"Germany"
+          },
+          {
+            "Id":2,
+            "Option":"Japan"
+          },
+          {
+            "Id":3,
+            "Option":"Russia"
+          },
+          {
+            "Id":4,
+            "Option":"US"
+          }
+        ],
+        "AnswerId":3
+      },
+      {
+        "Id" : 2,
+        "Question":"What is the new name of NASA’s WFIRST Hubble Telescope ?",
+        "Options":[
+          {
+            "Id":1,
+            "Option":"Nancy Grace Roman"
+          },
+          {
+            "Id":2,
+            "Option":"James E. WebbMonkey"
+          },
+          {
+            "Id":3,
+            "Option":"Thomas O Paine"
+          },
+          {
+            "Id":4,
+            "Option":"Richard H Truly"
+          }
+        ],
+        "AnswerId":1
+      },
+      {
+        "Id" : 3,
+        "Question":"India produced how much crude steel in April 2020 ?",
+        "Options":[
+          {
+            "Id":1,
+            "Option":"3.13 million tonnes"
+          },
+          {
+            "Id":2,
+            "Option":"4.13 million tonnes"
+          },
+          {
+            "Id":3,
+            "Option":"2.18 million tonnes"
+          },
+          {
+            "Id":4,
+            "Option":"1.58 million tonnes"
+          }
+        ],
+        "AnswerId":1
+      },
+      {
+        "Id" : 4,
+        "Question":"Which state has decided to open temples from June 1 ?",
+        "Options":[
+          {
+            "Id":1,
+            "Option":"Kerala"
+          },
+          {
+            "Id":2,
+            "Option":"Andhra Pradesh"
+          },
+          {
+            "Id":3,
+            "Option":"Uttarakhand"
+          },
+          {
+            "Id":4,
+            "Option":"Karnataka"
+          }
+        ],
+        "AnswerId":4
+      },
+      {
+        "Id" : 5,
+        "Question":"Which state has become the first Indian state to accord industrial status to sports ?",
+        "Options":[
+          {
+            "Id":1,
+            "Option":"Manipur"
+          },
+          {
+            "Id":2,
+            "Option":"Assam"
+          },
+          {
+            "Id":3,
+            "Option":"Mizoram"
+          },
+          {
+            "Id":4,
+            "Option":"Jharkhand"
+          }
+        ],
+        "AnswerId":3
+      }
+
+    ]
+
+  }

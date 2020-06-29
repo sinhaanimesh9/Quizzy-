@@ -1,0 +1,54 @@
+<div *ngIf="!sharedService.quizToResult">
+    <div style="border-color: rgb(253, 215, 236);border-style: double;">
+    <h1>Please take the Test first</h1>
+    <hr>
+    <button (click)="home()">Home</button>
+    </div>
+</div>
+<div *ngIf="sharedService.quizToResult">
+    
+        <button (click)="toResult()">Back to Results</button>&nbsp;
+        <button (click)="home()">Home</button>
+    <hr>
+    <div *ngFor="let quiz of contentsService.content.quiz; let i = index">
+        <div style="border-color: rgb(253, 215, 236);border-style: double; 
+                    background-color: rgb(217, 217, 250);">
+            <p>{{quiz.Id}}.) {{quiz.Question}}</p>
+            <p>
+                <li [ngClass]="
+                {'failure': sharedService.userResponse[i]===1 && quiz.AnswerId!==sharedService.userResponse[i],
+                'success': quiz.AnswerId===1}"
+                >{{quiz.Options[0].Option}}</li>
+                <li [ngClass]="
+                {'failure': sharedService.userResponse[i]===2 && quiz.AnswerId!==sharedService.userResponse[i],
+                'success': quiz.AnswerId===2}"
+                >{{quiz.Options[1].Option}}</li>
+                <li [ngClass]="
+                {'failure': sharedService.userResponse[i]===3 && quiz.AnswerId!==sharedService.userResponse[i],
+                'success': quiz.AnswerId===3}"
+                >{{quiz.Options[2].Option}}</li>
+                <li [ngClass]="
+                {'failure': sharedService.userResponse[i]===4 && quiz.AnswerId!==sharedService.userResponse[i],
+                'success': quiz.AnswerId===4}"
+                >{{quiz.Options[3].Option}}</li>
+            </p>
+            <div style="border-color: rgb(36, 196, 121);border-style: solid;"
+            *ngIf="quiz.AnswerId===sharedService.userResponse[i]">
+            [<b>Correct: </b><b style="color: rgb(25, 92, 25);">+{{contentsService.positiveMark}}</b> marks]
+            </div>
+            <div style="border-color: rgb(104, 159, 231);border-style: solid;"
+            *ngIf="sharedService.userResponse[i]===undefined">
+            [<b>Skipped: </b><b style="color: rgb(47, 84, 247);">0</b> marks]
+            </div>
+            <div style="border-color: rgb(230, 165, 148);border-style: solid;"
+            *ngIf="quiz.AnswerId!==sharedService.userResponse[i] && sharedService.userResponse[i]!==undefined">
+            [<b>Incorrect: </b><b style="color: rgb(233, 59, 29);">{{contentsService.negativeMark}}</b> marks]
+            </div>
+        </div>
+        <br>
+    </div>
+    <hr>
+        <button (click)="toResult()">Back to Results</button>&nbsp;
+        <button (click)="home()">Home</button>
+    <hr>
+</div>
